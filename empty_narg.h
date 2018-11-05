@@ -1,7 +1,6 @@
 
 // IS_EMPTY() returns nothing if the parameter list is empty and a single ',' (comma) otherwise.
-// The parameter list can have an arbitrary amount of comma-separated elements and up to 31
-// consecutive pairs of parentheses "(...etc...)(...etc...)"
+// The parameter list can have up to 32 parameters
 #define IS_EMPTY(...) IS_EMPTY1(__VA_ARGS__)
 #define IS_EMPTY1(...) IS_EMPTY2(DROP_PARAMS  __VA_ARGS__ (,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,EMPTY))
 #define IS_EMPTY2(...) IS_EMPTY3(__VA_ARGS__)
